@@ -9,6 +9,10 @@ def paul(x)
   x.each do |activity|
     paulMiseryScore += values[activity]
   end
+  get_mood(paulMiseryScore)
+end
+
+def get_mood(paulMiseryScore)
   case paulMiseryScore
   when 0..39
     return 'Super happy!'
