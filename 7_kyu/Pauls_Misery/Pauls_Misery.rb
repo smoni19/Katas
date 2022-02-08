@@ -13,6 +13,7 @@ def paul(x)
 end
 
 def get_mood(paulMiseryScore)
+  p paulMiseryScore
   case paulMiseryScore
   when 0..39
     return 'Super happy!'

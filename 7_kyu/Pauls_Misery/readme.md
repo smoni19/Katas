@@ -12,3 +12,8 @@ The Misery Score is the total points gained from the array. Once you have the to
 < 70 >= 40 = 'Happy!'
 < 100 >= 70 = 'Sad!'
 > 100 = 'Miserable!'
+
+
+expect(paul(['life', 'eating', 'life'])).to eq('Super happy!')
+expect(paul(['life', 'Petes kata', 'Petes kata', 'Petes kata', 'eating'])).to eq('Super happy!')
+expect(paul(['Petes kata', 'Petes kata', 'eating', 'Petes kata', 'Petes kata', 'eating'])).to eq('Happy!')
