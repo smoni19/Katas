@@ -7,7 +7,16 @@ def paul(x)
     "eating" => 1
   }
   x.each do |activity|
-    paulMiseryScore += values[activity].to_i
+    paulMiseryScore += values[activity]
   end
-  p paulMiseryScore
+  case paulMiseryScore
+  when 0..39
+    return 'Super happy!'
+  when 40..69
+    return 'Happy!'
+  when 70..99
+    return 'Sad!'
+  else
+    return 'Miserable!'
+  end
 end
