@@ -27,16 +27,8 @@ def fruit(reels, spins)
   item_tally = []
   score = 0
 
-  reels.each.with_index do | reel, index |
-    item = reels[index][spins[index]]
-    items.push(item)
-  end
-  
+  reels.each.with_index { | reel, index | items.push(reels[index][spins[index]]) }
   items.uniq.map { | item | item_tally << [item, items.count(item)] }
-
-  item_tally.map do | item, tally |
-    tally == 2 ? score = scores[item] : tally == 3 ? score = scores[item] * 10 : 0
-  end
-
+  item_tally.map { | item, tally | tally == 2 ? score = scores[item] : tally == 3 ? score = scores[item] * 10 : 0 }
   item_tally.include?(["Wild", 1]) ? score * 2 : score
 end
