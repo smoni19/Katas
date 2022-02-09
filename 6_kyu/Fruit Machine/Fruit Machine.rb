@@ -37,11 +37,6 @@ def fruit(reels, spins)
   item_tally.map do | item, tally |
     tally == 2 ? score = scores[item] : tally == 3 ? score = scores[item] * 10 : 0
   end
-  
-  items.each do | item |
-    scores = score * 2 if item == "Wild"
-  end
-  
-  score = score * 2 if item_tally.include?(["Wild", 1])
-  return score
+
+  item_tally.include?(["Wild", 1]) ? score * 2 : score
 end
