@@ -9,21 +9,8 @@
 =end
 
 def fruit(reels, spins)
-  scores = {
-    "Wild" => 10,
-    "Star" => 9,
-    "Bell" => 8,
-    "Shell" => 7,
-    "Seven" => 6,
-    "Cherry" => 5,
-    "Bar" => 4,
-    "King" => 3,
-    "Queen" => 2,
-    "Jack" => 1
-  }
-
+  scores = {"Wild" => 10, "Star" => 9, "Bell" => 8, "Shell" => 7, "Seven" => 6, "Cherry" => 5, "Bar" => 4, "King" => 3, "Queen" => 2, "Jack" => 1}
   items = []
-  item = ''
   item_tally = []
   score = 0
 
