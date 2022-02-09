@@ -1,5 +1,5 @@
 =begin
-  ------------------------  Approach ------------------------ 
+  ------------------------ Approach ------------------------ 
   Get element of each reel in reels array at corresponding spins index
   Count occurence of each item
   Calculate score based upon scores hash:
@@ -22,7 +22,26 @@ def fruit(reels, spins)
     "Jack" => 1
   }
 
+  items = []
+  item = ''
+  item_tally = []
+  score = 0
+
   reels.each.with_index do | reel, index |
-    puts reels[index][spins[index]]
+    item = reels[index][spins[index]]
+    items.push(item)
   end
+  
+  items.uniq.map { | item | item_tally << [item, items.count(item)] }
+
+  item_tally.map do | item, tally |
+    tally == 2 ? score = scores[item] : tally == 3 ? score = scores[item] * 10 : 0
+  end
+  
+  items.each do | item |
+    scores = score * 2 if item == "Wild"
+  end
+  
+  score = score * 2 if item_tally.include?(["Wild", 1])
+  return score
 end
