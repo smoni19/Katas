@@ -1,6 +1,10 @@
 # Katas
 Ruby/JavaScript Katas I am completing for practise
 
+## 5 Kyu:
+- Ruby:
+  - [Weight for weight](5%20kyu/Ruby/Weight%20for%20weight)
+
 ## 6 Kyu:
 - Ruby:
   - [Find The Parity Outlier](6%20kyu/Ruby/Find%20The%20Parity%20Outlier)
